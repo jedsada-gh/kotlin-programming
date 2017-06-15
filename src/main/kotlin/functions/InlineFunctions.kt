@@ -17,10 +17,12 @@ fun tryingToInline(op: () -> Unit) {
     op()
 }
 
-fun anotherFounction() {
+fun anotherFunction() {
     operation { println("This is this actual op functions") }
 }
 
 fun main(args: Array<String>) {
-    operation { println("This is this actual op functions") }
+    anotherFunction()
+    tryingToInline { nonop(1) }
+//    operation { println("This is this actual op functions") }
 }
