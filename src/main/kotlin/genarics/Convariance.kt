@@ -1,7 +1,6 @@
 package genarics
 
 import delegation.Customer
-import functions.op
 
 open class Person
 class Employee : Person()
@@ -16,8 +15,8 @@ interface ReadOnlyRepo<out T> {
 }
 
 interface WriteRepo<in T> {
-    fun save(obj : T)
-    fun saveAll(list : List<T>)
+    fun save(obj: T)
+    fun saveAll(list: List<T>)
 }
 
 fun main(args: Array<String>) {
